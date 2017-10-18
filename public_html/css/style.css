@@ -1,0 +1,33 @@
+body {
+    font-family: arial, tahoma, verdana, serif;
+    line-height:1.5em;
+    font-size: 12pt;
+    background-color:#83838D
+}
+
+h1{
+    font-size: 250%
+    text-align: center;
+}
+
+.pochylony {
+    font-style:italic;
+}
+.pogrubiony {
+    font-weight: bold
+}
+
+li {
+    font: italic bold 13px/25px "Times New Roman", arial, tahoma, serif;
+}
+
+.tekst1 {
+    color: #00FF26;
+}
+.tekst2 {
+    color:#00F8FF;
+}
+
+h2 {
+    text-align: center;
+}
