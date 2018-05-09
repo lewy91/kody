@@ -1,0 +1,5 @@
+CREATE TABLE tbuczniowie
+(
+	id INTEGER PRIMARY KEY AUTOINCREMENT
+	imie
+)
