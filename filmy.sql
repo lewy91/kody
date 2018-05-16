@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS tbfilmy;
+CREATE TABLE tbfilmy (
+id INTEGER PRIMARY KEY AUTINCREMENT,
+name TEXT,
+genre TEXT,
+year DATE,
+imdb_rating NUMERIC
+);
