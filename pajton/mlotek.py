@@ -6,15 +6,17 @@ import random
 
 def main(args):
     liczba = random.randint(1, 10)
-    print("Wylosowano:", liczba)
-#pobranie liczby od użytkownika
-    odp = input("podaj liczbe od 1 do 10:")
-    print("Podałeś liczbe:", odp)
+    # komentarz
+    for i in range(3):
+        odp = input("Podaj liczbę od 1 do 10: ")
+        print(" Podałeś liczbę:", odp)
 
-    if liczba == odp
-        print("zgadłeś!!!! LMAO")
-    else
-        print("przegrałeś ")
+        if liczba == int(odp):
+            print("Zgadłeś!")
+            break # przerwanie działania pentli
+        else:
+            print("Jeszcze raz!!!")
+
     return 0
 
 
