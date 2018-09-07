@@ -1,0 +1,16 @@
+body{
+	background-color:#AA0000;
+	color:#7D7D7D;
+	font:16px open sans,sans-serif;
+	margin:10}
+p,td{font:16px open sans,sans-serif}
+a:link{color:#151515}
+a:visited{color:#151515}
+a:hover{color:#7D7D7D;text-decoration:none}
+/* odnoœniki (lista rozwijalna) */
+a.pp:link,a.pp:visited {color:#151515;font-weight:bold}
+a.pp:hover{text-decoration:none}
+/* element na liœcie */
+p.el{margin-top:0;margin-bottom:0.5em}
+/* logo szko³y */
+.logo{text-align:center;margin-bottom:10px}
