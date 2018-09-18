@@ -43,11 +43,11 @@ def main(args):
             print("wszystkie liczby są równe")
         else:
             if c==a and c > b:
-                print(b,"i",a, "są najwieksze")
+                print("2 i 3 liczba są najwieksze,mają wartość:",a)
             if c==b and b > a:
-                print(b,"i",a, "są najwieksze")
+                print("2 i 3 liczba są najwieksze, mają wartość:",c)
             if b==a and b > c:
-                print(b,"i",a, "są najwieksze")
+                print("2 i 3 liczba są najwieksze, mają wartość:",b)
     return 0
 if __name__ == '__main__':
     import sys
