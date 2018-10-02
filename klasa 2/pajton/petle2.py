@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  petle1.py
+#  petle2.py
 #  
 #  Copyright 2018  <>
 #  
@@ -24,13 +24,11 @@
 
 
 def main(args):
-    a= 0
-    b= 0
-    while a < 75:
-        a = int(input("Podaj liczbę:"))
-        b = b + a
-    print("Za duża liczba", b)
+    a=int(input("Podaj pierwszą liczbę:"))
+    b=int(input("Podaj drugą liczbę:"))
+    while a >= b
+    return 0
 
-if __name__== '__main__':
+if __name__ == '__main__':
     import sys
     sys.exit(main(sys.argv))
