@@ -6,7 +6,7 @@
 
 def main(args):
 	a = 0
-	x = int(input("podaj: "))
+	x = int(input("podaj liczbę: "))
 	
 	for x in range(x+1):
 		a = x*x

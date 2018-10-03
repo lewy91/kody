@@ -10,7 +10,7 @@ def main(args):
     a = 0
     b = 0
     while a < 75:
-         a = int(input("Podaj  liczbę:"))
+         a = int(input("Podaj  liczbę mniejszą od 75:"))
          c = b + a
     print("Za duża liczba", c)
       

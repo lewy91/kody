@@ -13,7 +13,7 @@ def main(args):
     
     
     while x >= y:
-        y = int(input('Podaj poprawny zakres. Pierwsza liczba musi być mniejsza od drugiej: '))
+        y = int(input("Podaj poprawny zakres. Pierwsza liczba musi być mniejsza od drugiej: "))
     
     for z in range(x, y+1):
         print (z, " ", end='')
