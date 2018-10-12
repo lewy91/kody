@@ -1,0 +1,40 @@
+DROP TABLE IF EXISTS nazwiska;
+CREATE TABLE nazwiska (
+    Nr_ucz INTEGER PRIMARY KEY,
+    Nazwisko TEXT(30),
+    Imie1 TEXT(15),
+    Imie2 TEXT(15)
+);
+
+DROP TABLE IF EXISTS dane_osobowe;
+CREATE TABLE dane_osobowe (
+    Nr_ucz INTEGER PRIMARY KEY,
+    FOREIGN KEY (Nr_ucz) REFERENCES nazwiska (nr_ucznia)
+    Dzien INTEGER,
+    Miesiac INTEGER,
+    Rok INTEGER,
+    M_urodzenia TEXT,
+    Wojewodztwo TEXT
+);
+
+DROP TABLE IF EXISTS oceny;
+CREATE TABLE oceny (
+    Nr_ucz INTEGER PRIMARY KEY,
+    Zach TEXT,
+    Rel_Ety DECIMAL DEFAULT NULL,
+    Jpol DECIMAL DEFAULT NULL,
+    Jang DECIMAL DEFAULT NULL,
+    Jniem DECIMAL DEFAULT NULL,
+    Mat DECIMAL DEFAULT NULL,
+    Hist DECIMAL DEFAULT NULL,
+    Geog DECIMAL DEFAULT NULL,
+    Biol DECIMAL DEFAULT NULL,
+    Fiz DECIMAL DEFAULT NULL ,
+    Che DECIMAL DEFAULT NULL,
+    Tech DECIMAL DEFAULT NULL,
+    Info DECIMAL DEFAULT NULL,
+    Plas DECIMAL DEFAULT NULL,
+    PO DECIMAL DEFAULT NULL,
+    WF DECIMAL DEFAULT NULL,
+    FOREIGN KEY (Nr_ucz) REFERENCES dane_osobowe(Nr_ucz)
+);
