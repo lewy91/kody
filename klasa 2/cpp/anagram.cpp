@@ -17,8 +17,10 @@ void wyswietl(char tekst[], int roz) {
         cout << tekst[i];
     }
 }
-void anagram(char tab[], int roz){
-    for
+void anagram(char tb[], int roz){
+    for (int i = roz - 1; i >= 0; i--){
+        cout << tb[i];    
+        }
 }
 
 int main(int argc, char **argv)
@@ -27,6 +29,9 @@ int main(int argc, char **argv)
     char tekst[roz];
     cin.getline(tekst, roz);
     wyswietl(tekst, zlicz(tekst));
+    cout<<endl;
+    anagram(tekst,zlicz(tekst));
+    cout<<endl;
     return 0;
 }
 
