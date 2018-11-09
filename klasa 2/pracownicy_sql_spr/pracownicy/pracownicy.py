@@ -3,17 +3,12 @@
 
 import sqlite3
 import csv
-import os.path
 
-def dane_z_pliku(nazwa_pliku, separator=','):
+
+def dane_z_pliku(nazwa_pliku):
     dane = []  # pusta lista na dane
-    
-    if not os.path.isfile(nazwa_pliku):
-        print("Plik {} mie istnieje!".format(nazwa_pliku))
-        return dane
-    
     with open(nazwa_pliku, 'r', newline='', encoding='utf-8') as plik:
-        tresc = csv.reader(plik, delimiter=separator)
+        tresc = csv.reader(plik, delimiter='\t')
         for rekord in tresc:
             rekord = [x.strip() for x in rekord]  # oczyszczamy dane
             dane.append(rekord)  # dodawanie rekordów do listy
@@ -22,58 +17,45 @@ def dane_z_pliku(nazwa_pliku, separator=','):
 
 def kwerenda_1(cur):
     cur.execute("""
-        SELECT * FROM magazyn
-    """)
+        SELECT name AS nazwa, genre AS gatunek FROM apps
+     """)
 
-    """
-    SELECT name, downloads FROM fakeapps WHERE downloads > (SELECT AVG(downloads) FROM fakeapps);
-    SELECT name, downloads FROM fakeapps WHERE downloads > (SELECT AVG(downloads) FROM fakeapps) ORDER BY downloads DESC LIMIT 5;
-    SELECT COUNT(name) FROM fakeapps WHERE downloads > (SELECT AVG(downloads) FROM fakeapps);
-    SELECT category, SUM(downloads) AS suma_pobran FROM fakeapps GROUP BY category ORDER BY suma_pobran DESC;
-    """
     wyniki = cur.fetchall()  # pobranie wszystkich rekordów na raz
-    for row in wyniki:  # odczytywanie kolejnych rekordów
+    for row in wyniki:  # odczytanie rekordów
         print(tuple(row))  # drukowanie pól
-
-def ile_kolumn(cur, tab):
-    i = 0
-    for kol in cur.execute("PRAGMA table_info('" + tab + "')"):
-        i += 1
-    return i
 
 
 def main(args):
-    baza_nazwa ='uczniowie'
-    tabele= ['uczniowie', 'klasy', 'przedmioty', 'oceny']
-    
-    con = sqlite3.connect(baza_nazwa + '.db')  # połączenie z bazą
+    con = sqlite3.connect('szkola.db')  # połączenie z bazą
     cur = con.cursor()  # utworzenie kursora
 
     # utworzenie tabeli w bazie
-    with open(baza_nazwa + '.sql', 'r') as plik:
+    with open('szkola.sql', 'r') as plik:
         cur.executescript(plik.read())
 
-    for tab in tabele:
-        ile = ile_kolumn(cur, tab)
-        dane = dane_z_pliku(tab + '.csv')
-        ile_d =len(dane[0])
-        if ile > ile_d:
-            dane2 = []
-            for r in dane:
-                r.insert(0, None) # dodanie none na początku listy
-                dane2.append(r)
-            dane = dane2
-            ile_d += 1
-        pholders = ','.join(['?'] * ile_d)
-        
-        cur.executemany('INSERT INTO ' + tab + ' VALUES(' + pholders + ')',dane)
+     #dodawanie danych do bazy
+    kontakty= dane_z_pliku('szkoła_z6pr052010_kontakty.txt')
+    dane.pop(0)  # usuń pierwszy rekord z listy
+    cur.executemany('INSERT INTO kontakty VALUES(?, ?, ?, ?)', kontakty)
 
-
-    con.commit()  # zatwierdzenie zmian w bazie
-    con.close()  # zamknięcie połączenia z bazą
+    place = dane_z_pliku('szkoła_z6pr052010_place.txt')
+    dane.pop(0)  # usuń pierwszy rekord z listy
+    cur.executemany('INSERT INTO place VALUES(?, ?, ?, ?)', place)
+    
+    pracownicy= dane_z_pliku('szkoła_z6pr052010_pracownicy.txt')
+    dane.pop(0)  # usuń pierwszy rekord z listy
+    cur.executemany('INSERT INTO pracownicy VALUES(?, ?, ?, ?, ?, ?)', pracownicy)
+    
+    stanowiska = dane_z_pliku('szkoła_z6pr052010_stanowiska.txt')
+    dane.pop(0)  # usuń pierwszy rekord z listy
+    cur.executemany('INSERT INTO uczniowie VALUES(?, ?, ?, ?, ?, ?)', stanowisko)
+    
+    # przykład zapytania (kwerendy)
+    con.commit()
+    con.close()
     return 0
 
 
 if __name__ == '__main__':
     import sys
-sys.exit(main(sys.argv))
+    sys.exit(main(sys.argv))
