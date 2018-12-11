@@ -38,6 +38,19 @@ void sort_bubble(int tab[], int n){
                 zamien1(tab[i],tab[i+1]);
         }   
     }
+    cout << "\nSortowanie przez wstawienie\n";
+}
+
+void sort_insert(int tab, int n) {
+    cout << "\nSortowanie przez wstawianie\n";
+    int i, j, tmp;
+    for( i = 1; i < n; i++{
+        tmp = tab[i];
+        j = i - 1;
+        while(j >= 0 && tab[j] > tmp){
+            tab[j + 1];
+        }
+    }
 }
 
 int main(int argc, char **argv)
