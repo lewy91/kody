@@ -8,16 +8,16 @@ def rysuj(bok, kat, przyrost, warunek):
     turtle.forward(bok)
     turtle.right(kat)
     if kat < warunek:
-        bok +=1
+        bok -= 1
         rysuj(bok, kat, przyrost, warunek)
 
 
 def main(args):
     bok = int(input("Podaj bok: "))
     kat = int(input("Podaj kąt: "))
-    przyrost = 5
-    warunek = 100
-    turtle.setup(800, 600)
+    przyrost = 3
+    warunek = 180
+    turtle.setup(900, 600)
     turtle.color('green', 'blue')
     turtle.begin_fill()
     turtle.speed(30)

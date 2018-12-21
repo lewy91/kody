@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<!--
+   strona.html
+-->
+
+<head>
+<meta charset="utf-8" />
+<title>Moja strona</title>
+</head>
+
+<body>
+    <h1> Quiz - lista pytań</h1>
+    <h2> Pytania</h2>
+    {% for p in query %}
+    <p>
+        {{ p.id }} {{ p.pytanie }}
+    </p>
+    {% endfor %}
+</body>
+
+</html>

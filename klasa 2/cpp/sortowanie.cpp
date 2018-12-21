@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-void wypelnij_los(int tab[], int roz) {
+/* void wypelnij_los(int tab[], int roz) {
     srand(time(NULL));
     for(int i= 0; i < roz; i++){
         tab[i]= rand() % 101;
@@ -52,6 +52,19 @@ void sort_insert(int tab, int n) {
         }
     }
 }
+*/
+void sort_ros(int tab[], int n){
+    cout << "\nSortowanie rosnąco\n";
+    k = i;
+    for(i = 0; i <n; i++){
+    
+        for(int j = i + 1; j < n; j++){
+        if(tab[i] < tab[k]){
+            zamien(tab, j);
+            }
+        }
+    }
+}
 
 int main(int argc, char **argv)
 {
@@ -59,14 +72,15 @@ int main(int argc, char **argv)
     int tab[roz]; // statyczna deklaracja tablicy
     //wypelnij_los(tab,rozmiar);
     //drukuj(tab,rozmiar);
-    wypelnij_los(tab, roz);
-    drukuj(tab, roz);
-    int a = 10;
-    int b = 20;
-    zamien1(a, b);
-    zamien2(tab, roz);
-    sort_bubble(tab, roz);
-    drukuj(tab, roz);
+    //wypelnij_los(tab, roz);
+    //drukuj(tab, roz);
+    //int a = 10;
+    //int b = 20;
+    //zamien1(a, b);
+    //zamien2(tab, roz);
+    //sort_bubble(tab, roz);
+    //drukuj(tab, roz);
+    sort_ros(tab,roz)
     return 0;
 }
 
