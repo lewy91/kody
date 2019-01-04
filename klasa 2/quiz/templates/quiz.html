@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="pl">
-<!--
-   strona.html
--->
+{% extends "szablon.html" %}
+{% block tytul %}Moja strona{% endblock %}
+{% block h1 %}Quiz - odpowiedz na pytania{% endblock %}
+{% block tresc %}
 
-<head>
-<meta charset="utf-8" />
-<title>Moja strona</title>
-</head>
-
-<body>
-    <h1> Quiz - odpowiedz na pytania</h1>
-    
     <form method="POST">
     
     {% for p in query %}
@@ -29,6 +20,4 @@
     {% endfor %}
     <input type="submit" value="Zapisz odpowiedzi">
     </form>
-</body>
-
-</html>
+{% endblock %}

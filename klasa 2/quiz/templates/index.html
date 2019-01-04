@@ -1,37 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<!--
-   index.html
--->
+{% extends "szablon.html" %}
+{% block tytul %}Pytania{% endblock %}
+{% block h1 %}Pytanka{% endblock %}
 
-<head>
-<meta charset="utf-8" />
-<title>Quiz - pytania dla odważnych</title>
-<meta name="generator" content="Geany 1.32" />
-<style type="text/css">
-    #menu li { display: inline; }
-    .ifno {color: green;}
-</style>
-</head>
-
+{% block tresc %}
 <body>
-    <ul id="menu">
-        <li><a href="{{ url_for('index') }}">Strona główna</a></li>
-        <li><a href="{{ url_for('lista') }}">Lista pytań</a></li>
-        <li><a href="{{ url_for('quiz') }}">Quiz</a></li>
-        <li><a href="#">Dodaj pytanie</a></li>
-    </ul>
-    <h1>Pytania dla odważnych</h1>
-    
     <div id="komunikaty">
-        {% with komunikaty = get flashed_messages(with_categories=true) %}
+        {% with komunikaty = get_flashed_messages(with_categories=true) %}
         {% if komunikaty %}
             {% for kategoria, komunikat in komunikaty %}
             <p class="{{ kategoria }}">{{ komunikat }}</p>
             {% endfor %}
-        {% end if %}
+        {% endif %}
         {% endwith %}
-    <div>
-</body>
+        {% endblock %}
+    </div>
+{% endblock %}
 
-</html>

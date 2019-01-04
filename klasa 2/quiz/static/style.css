@@ -1,3 +1,2 @@
-body {
-    background-color: blue;
-}
+#menu li { display: inline; }
+.info {color: blue; fontweight: bold;}

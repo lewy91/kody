@@ -15,10 +15,10 @@ def rysuj(bok, kat, przyrost, warunek):
 def main(args):
     bok = int(input("Podaj bok: "))
     kat = int(input("Podaj kąt: "))
-    przyrost = 3
+    przyrost = 5
     warunek = 180
     turtle.setup(900, 600)
-    turtle.color('green', 'blue')
+    turtle.color('grey', 'blue')
     turtle.begin_fill()
     turtle.speed(30)
     

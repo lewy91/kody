@@ -7,9 +7,9 @@ from flask import g
 from modele import *
 from views import *
 
-#konfiguracja aplikacji
+# konfiguracja aplikacji
 app.config.update(dict(
-    SECRET_KEY='HASIDHAISHDIASHDIASH'
+    SECRET_KEY='hausdfbfihfshfdksfoausrgfiuswhfhjhfdsfixbcvhfishfisfkshfsdfdisfdesrfewdshfbdsjbvdsbfbfdjfjh',
 ))
 
 @app.before_request

@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="pl">
-<!--
-   strona.html
--->
+{% extends "szablon.html" %}
+{% block tytul %}Quiz-lista pytań{% endblock %}
+{% block h1 %}Quiz-lista pytań{% endblock %}
 
-<head>
-<meta charset="utf-8" />
-<title>Moja strona</title>
-</head>
-
-<body>
-    <h1> Quiz - lista pytań</h1>
-    <h2> Pytania</h2>
+ {% block tresc %}
     {% for p in query %}
     <p>
         {{ p.id }} {{ p.pytanie }}
     </p>
     {% endfor %}
-</body>
-
-</html>
+{% endblock %}
