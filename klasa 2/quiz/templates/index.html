@@ -1,9 +1,8 @@
 {% extends "szablon.html" %}
-{% block tytul %}Pytania{% endblock %}
-{% block h1 %}Pytanka{% endblock %}
+{% block tytul %}Quiz - pytania dla kozaków{% endblock %}
+{% block h1 %}Pytania dla odważnych{% endblock %}
 
 {% block tresc %}
-<body>
     <div id="komunikaty">
         {% with komunikaty = get_flashed_messages(with_categories=true) %}
         {% if komunikaty %}
@@ -12,7 +11,5 @@
             {% endfor %}
         {% endif %}
         {% endwith %}
-        {% endblock %}
     </div>
 {% endblock %}
-
