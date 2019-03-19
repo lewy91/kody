@@ -1,0 +1,50 @@
+RAM- pamięć operacyjna jest ulotna, RANDOM ACCESS MEMORY-pamięć o swobodnym dostępie
+System operacyjny, programy, użytkowe, dane
+
+Pamięć stała: HDD, SSD, CD/DVD, taśmy, dyskietki
+
+Pamięć sekwencyjna
+
+ReadOnlyMemory, swobodny dostęp
+
+BIOS- BasicInputOutputSystem
+FIRMWARE-pisany w ASEMLBERZE i zapisany w ROMie
+ASEMBLER
+CPU: ALU, REJESTRY, 64-bitowe - podstawowy rozmiar słowa
+
+adresy,danych, dane
+STOS
+
+Pamięć, CPU, urządzenia wyjścia wejścia muszą być połączone magistralą
+
+Jest ona szyną sterującą, adresową, oraz tzw. szyną danych
+Są dwa rodzaje: równoległe i szeregowe.
+    
+INPUT: klawiatura, karty perforowane, mysz, joystick, mikrofon,
+tablet graficzny + pióro, kierownica, czujnik GPS, kamera, skaner
+
+OUTPUT: drukarka, monitor, głośniki, słuchawki
+
+I/O: HDD, SSD, CD/DVD, ekran dotykowy, interfejs sieciowy
+
+System operacyjny:
+md
+-interfejs:
+    - tekstowe:
+        - terminal md
+        - powłoka (shell):BASH(linux), CMD, PowerShell
+        
+    - graficzne:
+    Windows: okno (przyciski sterujące, mobilność, skalowalność,
+    menu: polecenia)
+    
+    Linux:
+    XORG - serwer graficzny
+    Gnome, KDE, XFCE
+    
+Jądro systemu:
+- obsługa urządzeń, sterowniki urządzeń(Windows- podsystem, Linux- jądro)
+- planista: wielozadaniowość, wywłaszczenie, kolejkowanie żądań
+-obsługa wielu aplikacji:
+wirtualny model komputera
+    

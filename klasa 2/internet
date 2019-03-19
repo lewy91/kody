@@ -1,0 +1,15 @@
+Sieć
+
+LAN(Local Area Network)
+Ethernet, skrętka, rj45, switch,
+Adres MAC (unikalny)
+
+router:
+interfejs wewnętrzny (LAN)
+interfejs zewnętrzny (WAN- Wide Area Network)
+
+
+Adres IP:
+Adresy lokalne
+192.168.3.19- 32 bity
+Serwery DNS (Domain Name System)
