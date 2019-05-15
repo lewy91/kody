@@ -13,3 +13,15 @@ Adres IP:
 Adresy lokalne
 192.168.3.19- 32 bity
 Serwery DNS (Domain Name System)
+
+protokół (najważniejsze to: HTTP)
+HTTP działa domyślnie na: 80
+POST
+protokół bezstanowy
+SESJE + COOKIES(nie należy do http)
+
+protokoł FTP:
+UPLOAD Aplikacji Sieciowych
+protokół SMTP (Simple Mail Transfer Protocol)
+Kapsułkowanie- opakowywanie informacji wysyłanych przez sieć
+TCO- segment, protokół połączeniowy
