@@ -43,7 +43,7 @@ int min1(int tab[], int roz) {
 
 int main(int argc, char **argv)
 {
-	int rozmiar = 50;
+	int rozmiar = 5;
     int tab[rozmiar]; // statyczna deklaracja tablicy
     wypelnij_los(tab,rozmiar);
     drukuj(tab,rozmiar);
